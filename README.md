@@ -1,54 +1,49 @@
-# Imersão Vibe Coding — Landing Promocional
+# Imersão Vibe Coding - Landing Final
 
-Três versões de landing page de vendas para a **Imersão Vibe Coding** (Do Zero ao SaaS com IA em 3 dias, presencial em Itaguaí — RJ).
+Landing promocional da **Imersão Vibe Coding** para publicação na Vercel.
 
-🔗 **Online (GitHub Pages):** https://inematds.github.io/imersaovc/
+Online atual no GitHub Pages: https://inematds.github.io/imersaovc/
 
-## Versões
+## Página final
 
-| Arquivo | Estilo | Quando usar |
-|---|---|---|
-| [`versao-1.html`](versao-1.html) | **Conversão direta** — oferta, escassez, FAQ de objeções | tráfego quente / anúncio |
-| [`versao-2.html`](versao-2.html) | **Storytelling** — jornada antes→depois, editorial, depoimentos | desejo e confiança |
-| [`versao-3.html`](versao-3.html) | **Visual ousado** — hero animado, glass, contadores, motion | impacto imediato |
-| [`versao-4.html`](versao-4.html) | **Imersão presencial (formato completo, recomendada)** — hero com vídeo, datas/local, "Acesso à Imersão Presencial", jornada dia a dia, barra de vagas | página de vendas pronta |
+O arquivo `index.html` agora é a landing principal:
 
-`index.html` é um seletor que mostra as 4. Quando decidir a versão final, **renomeie o arquivo dela para `index.html`**.
+- Copy baseada na versão de conversão direta.
+- Visual baseado na versão ousada com hero imersivo, glassmorphism, motion e contadores.
+- Asset visual próprio em `assets/hero-vibe-coding.png`.
+- Configuração estática para Vercel em `vercel.json`.
 
-## Oferta (já configurada nas páginas)
+## Publicação na Vercel
 
-- De **R$ 4.800** por **R$ 3.000** (oferta de lançamento)
-- **20 vagas** por imersão
-- **Dupla ou mais (2+):** R$ 2.700 por pessoa
+Projeto estático, sem build.
 
-## Pagamento via Asaas
+Configuração recomendada na Vercel:
 
-Mesmo padrão usado no **inema.vip**: o botão de CTA aponta direto para um **link de checkout do Asaas** (`https://www.asaas.com/c/XXXX`).
+- Framework Preset: **Other**
+- Build Command: deixar vazio
+- Output Directory: `.`
+- Install Command: deixar vazio
 
-### Como ativar (obrigatório antes de vender)
+## Antes de vender
 
-1. No painel do Asaas, crie um **Link de Pagamento**:
-   - **Individual:** valor R$ 3.000.
-   - **Dupla:** valor R$ 2.700 (por pessoa). Pode ser um link separado ou usar o campo de **desconto** do próprio Asaas.
-2. Copie a URL gerada (formato `https://www.asaas.com/c/...`).
-3. Em cada `versao-*.html`, substitua os placeholders:
-   - `https://www.asaas.com/c/SEU_LINK_INDIVIDUAL` → link de R$ 3.000
-   - `https://www.asaas.com/c/SEU_LINK_DUPLA` → link de R$ 2.700/pessoa
-4. Commit + push. O GitHub Pages atualiza sozinho.
+Substitua os placeholders dos botões de pagamento em `index.html`:
 
-> Procure por `SEU_LINK_INDIVIDUAL` e `SEU_LINK_DUPLA` nos arquivos.
+- `https://www.asaas.com/c/SEU_LINK_INDIVIDUAL`
+- `https://www.asaas.com/c/SEU_LINK_DUPLA`
 
-### Cobrança dinâmica (opcional)
+Datas e local da próxima turma:
 
-Se quiser gerar cobranças via API (customer + PIX/cartão/boleto, desconto automático para 2+, webhook de confirmação), o cliente de referência já existe no projeto `inemaonline` (`worker/src/asaas.ts`): cria customer, cria payment com campo `discount` (`FIXED`/`PERCENTAGE`), gera QR Code PIX e processa webhook `PAYMENT_CONFIRMED`/`PAYMENT_RECEIVED`.
+> 26 a 28 de junho de 2026 · Refúgio Inema · Canela - RS.
 
-## Editar datas/local
+## Arquivos de referência
 
-As páginas usam o local **Itaguaí — RJ, Rua Prefeito José Maria de Brito, 251** e o texto _"Próxima turma — datas a confirmar"_. Procure pelos comentários `<!-- EDITAR DATAS -->` para colocar as datas reais.
+As versões antigas continuam no repositório para consulta:
 
-## Stack
-
-HTML estático + Tailwind (CDN) + Google Fonts. Sem build. Abre direto no navegador.
+- `versao-1.html`: conversão direta
+- `versao-2.html`: storytelling
+- `versao-3.html`: visual ousado
+- `versao-4.html`: formato completo presencial
 
 ---
+
 INEMA.CLUB · 2026
