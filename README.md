@@ -29,7 +29,6 @@ Configuração recomendada na Vercel:
 Substitua os placeholders dos botões de pagamento em `index.html`:
 
 - `https://www.asaas.com/c/SEU_LINK_INDIVIDUAL`
-- `https://www.asaas.com/c/SEU_LINK_DUPLA`
 
 Datas e local da próxima turma:
 
