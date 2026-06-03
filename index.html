@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imersão Vibe Coding | Do Zero ao SaaS com IA em 3 Dias</title>
+<title>Imersão Vibe Code | Do Zero ao SaaS com IA em 3 Dias</title>
 <meta name="description" content="Imersão presencial de 3 dias para construir uma plataforma SaaS completa com agentes de IA, deploy e monetização.">
-<meta property="og:title" content="Imersão Vibe Coding">
+<meta property="og:title" content="Imersão Vibe Code">
 <meta property="og:description" content="Do zero ao SaaS com IA em 3 dias. Construa uma plataforma completa com agentes, pagamentos, landing page e deploy.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero-vibe-coding.png">
@@ -75,12 +75,13 @@ strong { color: #fff; font-weight: 800; }
 .topbar {
   position: relative;
   z-index: 20;
-  background: var(--yellow);
-  color: #090909;
+  background: rgba(255,255,255,.06);
+  color: #f4f5f8;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 900;
-  padding: 9px 14px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
 }
 
 .nav {
@@ -194,10 +195,10 @@ h1, h2, h3 {
   margin: 0;
 }
 h1 {
-  font-size: 64px;
+  font-size: 82px;
   line-height: 1;
   font-weight: 900;
-  max-width: 760px;
+  max-width: 850px;
 }
 .grad {
   color: transparent;
@@ -210,6 +211,34 @@ h1 {
   max-width: 680px;
   color: #d4d7df;
   font-size: 20px;
+}
+.hero-highlight {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding: 14px;
+  border: 1px solid rgba(250,204,21,.32);
+  border-radius: 8px;
+  background: rgba(255,255,255,.075);
+  backdrop-filter: blur(14px);
+}
+.hero-highlight strong {
+  color: var(--yellow);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: 34px;
+  line-height: 1;
+}
+.hero-highlight span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+}
+.hero-highlight small {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
 }
 .hero-meta {
   margin: 0 0 34px;
@@ -633,8 +662,13 @@ footer {
   .hero-content {
     padding: 58vh 0 48px;
   }
-  h1 { font-size: 44px; }
+  h1 { font-size: 56px; }
   .hero-copy { font-size: 18px; }
+  .hero-highlight {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .hero-actions .button { width: 100%; }
   .hero-stats,
   .build-grid,
@@ -649,7 +683,7 @@ footer {
 
 @media (max-width: 640px) {
   .shell { width: min(100% - 28px, 1120px); }
-  .topbar { font-size: 12px; }
+  .topbar { font-size: 13px; }
   .nav-inner { height: 58px; }
   .brand { font-size: 14px; }
   .nav .button { display: none; }
@@ -657,8 +691,10 @@ footer {
     font-size: 12px;
     align-items: flex-start;
   }
-  h1 { font-size: 36px; }
+  h1 { font-size: 42px; }
   h2 { font-size: 30px; }
+  .hero-highlight strong { font-size: 30px; }
+  .hero-highlight span { font-size: 18px; }
   .hero-content { padding-top: 50vh; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .band { padding: 64px 0; }
@@ -711,14 +747,14 @@ footer {
 </head>
 <body>
   <div class="topbar">
-    Turma limitada a 20 vagas. Oferta de lançamento: de R$ 4.800 por R$ 2.000.
+    26 a 28 de junho de 2026 · Refúgio Inema · Canela - RS
   </div>
 
   <nav class="nav">
     <div class="shell nav-inner">
-      <a href="#" class="brand" aria-label="Imersão Vibe Coding">
+      <a href="#" class="brand" aria-label="Imersão Vibe Code">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span>Imersão Vibe Coding</span>
+        <span>Imersão Vibe Code</span>
       </a>
       <div class="nav-links" aria-label="Navegação principal">
         <a href="#construir">Construção</a>
@@ -741,7 +777,12 @@ footer {
           <span class="pulse" aria-hidden="true"></span>
           Presencial no Refúgio Inema, Canela - RS. De 26 a 28 de junho de 2026.
         </div>
-        <h1>Imersão <span class="grad">Vibe Coding</span></h1>
+        <h1>Imersão <span class="grad">Vibe Code</span></h1>
+        <div class="hero-highlight" aria-label="Valor, local e data da imersão">
+          <strong>R$ 2.000</strong>
+          <span>Refúgio Inema, Canela - RS</span>
+          <small>26 a 28 de junho de 2026</small>
+        </div>
         <p class="hero-copy">
           Do zero ao SaaS com IA em 3 dias. Construa uma plataforma funcional com agentes de inteligência artificial, deploy e monetização.
         </p>
@@ -835,7 +876,7 @@ footer {
           <div class="section-kicker">Para quem é</div>
           <h2>Feita para quem quer construir produtos com IA sem ficar preso só na teoria.</h2>
           <p class="lead">
-            A imersão atende desenvolvedores, empreendedores, estudantes de tecnologia e profissionais que querem transformar ideias em software funcional usando Vibe Coding.
+            A imersão atende desenvolvedores, empreendedores, estudantes de tecnologia e profissionais que querem transformar ideias em software funcional usando Vibe Code.
           </p>
         </div>
         <div class="audience-list">
@@ -912,7 +953,7 @@ footer {
             <p class="lead">
               3 dias no Refúgio Inema, em Canela - RS, com acesso ao código-fonte, prompts e suporte para construir sua plataforma SaaS com IA.
             </p>
-            <div class="price-before">De <s>R$ 4.800</s> por apenas</div>
+            <div class="price-before">Investimento</div>
             <div class="price">R$ 2.000</div>
             <p class="payment-note">Pagamento via Asaas. Pix, cartão ou boleto.</p>
 
@@ -980,7 +1021,7 @@ footer {
 
   <footer>
     <div class="shell">
-      Imersão Vibe Coding · INEMA.CLUB · Refúgio Inema · Canela - RS · 2026
+      Imersão Vibe Code · INEMA.CLUB · Refúgio Inema · Canela - RS · 2026
     </div>
   </footer>
 
