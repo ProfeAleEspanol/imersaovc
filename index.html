@@ -604,6 +604,37 @@ h2 {
   color: var(--muted);
 }
 
+.contact-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  padding: 26px;
+}
+.contact-card span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.contact-card h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.contact-card p {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
 .final-cta {
   position: relative;
   overflow: hidden;
@@ -675,7 +706,8 @@ footer {
   .build-grid,
   .timeline,
   .proof-grid,
-  .audience {
+  .audience,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
   .proof-grid { gap: 24px; }
@@ -761,7 +793,7 @@ footer {
         <a href="#construir">Construção</a>
         <a href="#jornada">Jornada</a>
         <a href="#oferta">Oferta</a>
-        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
       </div>
       <a class="button button-primary" href="#oferta">Garantir vaga</a>
     </div>
@@ -970,29 +1002,26 @@ footer {
       </div>
     </section>
 
-    <section class="band band-soft" id="faq">
+    <section class="band band-soft" id="contato">
       <div class="shell">
         <div class="section-head reveal">
-          <div class="section-kicker">Dúvidas frequentes</div>
-          <h2>Antes de garantir sua vaga.</h2>
+          <div class="section-kicker">Contato</div>
+          <h2>Fale com a equipe da Imersão Vibe Code.</h2>
+          <p>Confirme sua inscrição, tire dúvidas sobre pagamento e receba as orientações práticas para participar do imersivo.</p>
         </div>
-        <div class="faq">
-          <details class="faq-item reveal">
-            <summary>Preciso saber programar?</summary>
-            <p>Não precisa chegar como especialista. A imersão é prática e guiada, com foco em construir usando IA, método e estrutura de produto.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>É presencial mesmo?</summary>
-            <p>Sim. A proposta é construir lado a lado durante 3 dias, com acompanhamento direto e formato 100% presencial.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Vou sair com algo pronto?</summary>
-            <p>Sim. O objetivo é sair com uma plataforma SaaS de assistentes com IA publicada em produção, além do código e prompts usados no processo.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Quais são as formas de pagamento?</summary>
-            <p>Os links de checkout podem ser configurados no Asaas para Pix, cartão e boleto. Substitua os placeholders dos botões pelos links reais antes da venda.</p>
-          </details>
+        <div class="contact-grid">
+          <article class="contact-card reveal">
+            <span>WhatsApp</span>
+            <h3>+55 54 99642-2265</h3>
+            <p>Fale direto com a equipe para confirmar inscrição, turma e orientações do imersivo.</p>
+            <a class="button button-primary" href="https://wa.me/5554996422265" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+          </article>
+          <article class="contact-card reveal">
+            <span>E-mail</span>
+            <h3>inemapix@gmail.com</h3>
+            <p>Envie sua mensagem para tirar dúvidas sobre pagamento, local e participação.</p>
+            <a class="button button-secondary" href="mailto:inemapix@gmail.com">Enviar e-mail</a>
+          </article>
         </div>
       </div>
     </section>
