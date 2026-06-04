@@ -559,6 +559,12 @@ h2 {
   color: var(--muted);
   margin: 0 0 26px;
 }
+.payment-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
 .duo {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -745,6 +751,7 @@ footer {
   .build-item { min-height: auto; }
   .offer-box { padding: 32px 18px; }
   .price { font-size: 52px; }
+  .payment-actions { grid-template-columns: 1fr; }
   .mobile-cta {
     position: fixed;
     z-index: 40;
@@ -1000,9 +1007,12 @@ footer {
             </p>
             <div class="price-before">Valor promocional</div>
             <div class="price">R$ 2.000</div>
-            <p class="payment-note">Pagamento via Asaas. Pix, cartão ou boleto.</p>
+            <p class="payment-note">Escolha a forma de pagamento:</p>
 
-            <a class="button button-primary" href="https://www.asaas.com/c/SEU_LINK_INDIVIDUAL">Garantir minha vaga</a>
+            <div class="payment-actions">
+              <a class="button button-primary" href="https://nubank.com.br/cobranca/m4KENiTEVEbrh9fs" target="_blank" rel="noopener noreferrer">Pagar via Pix</a>
+              <a class="button button-secondary" href="https://www.asaas.com/c/5qlm9j5zefdvrd78" target="_blank" rel="noopener noreferrer">Pagar com cartão</a>
+            </div>
 
             <div class="security">
               <span>Vagas limitadas</span>

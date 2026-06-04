@@ -24,11 +24,12 @@ Configuração recomendada na Vercel:
 - Output Directory: `.`
 - Install Command: deixar vazio
 
-## Antes de vender
+## Links de pagamento
 
-Substitua os placeholders dos botões de pagamento em `index.html`:
+Os botões de pagamento em `index.html` estão configurados com:
 
-- `https://www.asaas.com/c/SEU_LINK_INDIVIDUAL`
+- Pix: `https://nubank.com.br/cobranca/m4KENiTEVEbrh9fs`
+- Cartão de crédito: `https://www.asaas.com/c/5qlm9j5zefdvrd78`
 
 Datas e local da próxima turma:
 
