@@ -74,6 +74,22 @@ function Draw-Text($g, [string]$text, [float]$x, [float]$y, [float]$w, [float]$f
   return $y + ($size.Height * $lineHeight)
 }
 
+function Draw-CenteredText($g, [string]$text, [float]$x, [float]$y, [float]$w, [float]$fontSize, [string]$color, [int]$style = 0, [string]$family = "Segoe UI", [float]$lineHeight = 1.08) {
+  $font = New-Object System.Drawing.Font($family, $fontSize, $style, [System.Drawing.GraphicsUnit]::Pixel)
+  $brush = New-Object System.Drawing.SolidBrush((ColorFromHex $color))
+  $format = New-Object System.Drawing.StringFormat
+  $format.Alignment = [System.Drawing.StringAlignment]::Center
+  $format.LineAlignment = [System.Drawing.StringAlignment]::Near
+  $format.Trimming = [System.Drawing.StringTrimming]::Word
+  $size = $g.MeasureString($text, $font, [int]$w, $format)
+  $rect = New-Object System.Drawing.RectangleF($x, $y, $w, $size.Height * $lineHeight)
+  $g.DrawString($text, $font, $brush, $rect, $format)
+  $font.Dispose()
+  $brush.Dispose()
+  $format.Dispose()
+  return $y + ($size.Height * $lineHeight)
+}
+
 function Draw-Base($g, $hero, [int]$w, [int]$h, [float]$dark = .72) {
   Draw-CoverImage $g $hero $w $h
   $black = [System.Drawing.Color]::FromArgb([int](255 * $dark), 5, 6, 10)
@@ -100,6 +116,7 @@ $hero = [System.Drawing.Image]::FromFile($heroPath)
 $bold = [System.Drawing.FontStyle]::Bold
 $regular = [System.Drawing.FontStyle]::Regular
 $imersao = "Imers$([char]0x00E3)o"
+$imersivo = "Imersivo"
 $refugio = "Ref$([char]0x00FA)gio Inema"
 $refugioUpper = "REF$([char]0x00DA)GIO INEMA"
 $producao = "produ$([char]0x00E7)$([char]0x00E3)o"
@@ -109,17 +126,17 @@ $cartao = "cart$([char]0x00E3)o"
 $pair = New-Graphic 1080 1080
 $bmp = $pair[0]; $g = $pair[1]
 Draw-Base $g $hero 1080 1080 .76
-Draw-RoundedFill $g 64 58 540 56 12 (ColorFromHex "#ffffff" 20) (ColorFromHex "#ffffff" 38)
-[void](Draw-Text $g "26 A 28 DE JUNHO DE 2026" 86 72 490 25 "#f7f7fb" $bold)
-[void](Draw-Text $g $imersao 64 176 880 90 "#ffffff" $bold)
-[void](Draw-Text $g "Vibe Code" 64 268 900 126 "#facc15" $bold)
-[void](Draw-Text $g "Do zero ao SaaS com IA em 3 dias" 70 432 820 42 "#e8eaf1" $bold)
-Draw-RoundedFill $g 70 558 760 126 14 (ColorFromHex "#ffffff" 18) (ColorFromHex "#facc15" 95)
-[void](Draw-Text $g "$refugioUpper - CANELA - RS" 100 586 700 36 "#ffffff" $bold)
-[void](Draw-Text $g "Valor promocional: R$ 2.000" 100 636 700 31 "#facc15" $bold)
-[void](Draw-Text $g "Construa agentes de IA, dashboard, pagamentos e deploy." 70 762 760 31 "#cfd3dc" $regular)
-Draw-RoundedFill $g 70 910 382 64 10 (ColorFromHex "#facc15") $null
-[void](Draw-Text $g "GARANTA SUA VAGA" 96 926 330 26 "#080808" $bold)
+Draw-RoundedFill $g 250 70 580 58 12 (ColorFromHex "#ffffff" 20) (ColorFromHex "#ffffff" 38)
+[void](Draw-CenteredText $g "26 A 28 DE JUNHO DE 2026" 260 84 560 25 "#f7f7fb" $bold)
+[void](Draw-CenteredText $g $imersivo 90 214 900 112 "#ffffff" $bold)
+[void](Draw-CenteredText $g "Vibe Code" 70 330 940 154 "#facc15" $bold)
+[void](Draw-CenteredText $g "Do zero ao SaaS com IA em 3 dias" 110 508 860 42 "#e8eaf1" $bold)
+Draw-RoundedFill $g 180 634 720 122 14 (ColorFromHex "#ffffff" 18) (ColorFromHex "#facc15" 95)
+[void](Draw-CenteredText $g "$refugioUpper - CANELA - RS" 210 662 660 33 "#ffffff" $bold)
+[void](Draw-CenteredText $g "Valor promocional: R$ 2.000" 210 710 660 30 "#facc15" $bold)
+[void](Draw-CenteredText $g "Construa agentes de IA, dashboard, pagamentos e deploy." 140 820 800 29 "#cfd3dc" $regular)
+Draw-RoundedFill $g 330 932 420 64 10 (ColorFromHex "#facc15") $null
+[void](Draw-CenteredText $g "GARANTA SUA VAGA" 350 948 380 26 "#080808" $bold)
 $bmp.Save((Join-Path $outDir "instagram-feed-1080.png"), [System.Drawing.Imaging.ImageFormat]::Png)
 $g.Dispose(); $bmp.Dispose()
 
