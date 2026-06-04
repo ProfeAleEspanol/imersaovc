@@ -650,6 +650,75 @@ h2 {
   margin: 0 0 22px;
 }
 
+.banner-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.banner-link {
+  position: relative;
+  overflow: hidden;
+  min-height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(250,204,21,.14), rgba(56,189,248,.07)),
+    rgba(255,255,255,.055);
+  backdrop-filter: blur(14px);
+  padding: 26px;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.banner-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(250,204,21,.55);
+  background:
+    linear-gradient(135deg, rgba(250,204,21,.20), rgba(168,85,247,.10)),
+    rgba(255,255,255,.075);
+}
+.banner-link::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -78px;
+  top: -92px;
+  border-radius: 999px;
+  background: rgba(250,204,21,.18);
+}
+.banner-link span {
+  position: relative;
+  z-index: 1;
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.banner-link h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 34px;
+  margin: 14px 0 8px;
+}
+.banner-link p {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  margin: 0;
+}
+.banner-link strong {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+}
+
 .final-cta {
   position: relative;
   overflow: hidden;
@@ -723,7 +792,8 @@ footer {
   .timeline,
   .proof-grid,
   .audience,
-  .contact-grid {
+  .contact-grid,
+  .banner-links {
     grid-template-columns: 1fr;
   }
   .proof-grid { gap: 24px; }
@@ -1044,6 +1114,29 @@ footer {
             <p>Envie sua mensagem para tirar dúvidas sobre pagamento, local e participação.</p>
             <a class="button button-secondary" href="mailto:inemapix@gmail.com">Enviar e-mail</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="section-kicker">Acesse também</div>
+          <h2>Continue conectado ao ecossistema INEMA.</h2>
+        </div>
+        <div class="banner-links">
+          <a class="banner-link reveal" href="https://www.inema.club/" target="_blank" rel="noopener noreferrer">
+            <span>Portal oficial</span>
+            <h3>INEMA.CLUB</h3>
+            <p>Conteúdos, projetos e novidades do ecossistema INEMA.</p>
+            <strong>Acessar portal</strong>
+          </a>
+          <a class="banner-link reveal" href="https://inema.vip/" target="_blank" rel="noopener noreferrer">
+            <span>Comunidade</span>
+            <h3>INEMA.VIP</h3>
+            <p>Entre na comunidade e acompanhe experiências, imersivos e oportunidades.</p>
+            <strong>Entrar na comunidade</strong>
+          </a>
         </div>
       </div>
     </section>
