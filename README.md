@@ -1,49 +1,47 @@
-# Imersão Vibe Coding - Landing Final
+# Imersivo Vibe Code - Landing Page
 
-Landing promocional da **Imersão Vibe Coding** para publicação na Vercel.
+Landing page estática para venda do **Imersivo Vibe Code**, evento presencial da **INEMA** em Canela/RS.
 
-Online atual no GitHub Pages: https://inematds.github.io/imersaovc/
+## Estrutura
 
-## Página final
-
-O arquivo `index.html` agora é a landing principal:
-
-- Copy baseada na versão de conversão direta.
-- Visual baseado na versão ousada com hero imersivo, glassmorphism, motion e contadores.
-- Asset visual próprio em `assets/hero-vibe-coding.png`.
-- Configuração estática para Vercel em `vercel.json`.
+- `index.html`: página principal publicada.
+- `assets/css/imersivo-vibe-code.css`: estilos da landing.
+- `assets/js/event-config.js`: configuração central de evento, checkout, SEO, FAQs, projetos e depoimentos.
+- `assets/js/main.js`: comportamento da página, CTAs, FAQ, analytics neutro e renderização condicional de provas.
+- `assets/hero-vibe-coding.png`: imagem visual abstrata utilizada no hero.
+- `assets/social/`: criativos sociais gerados pelo script.
+- `scripts/generate-social-assets.ps1`: gera imagens sociais com as informações atuais do evento.
 
 ## Publicação na Vercel
 
 Projeto estático, sem build.
 
-Configuração recomendada na Vercel:
+Configuração recomendada:
 
 - Framework Preset: **Other**
 - Build Command: deixar vazio
 - Output Directory: `.`
 - Install Command: deixar vazio
 
-## Links de pagamento
+## Conteúdo editável
 
-Os botões de pagamento em `index.html` estão configurados com:
+As informações variáveis ficam em `assets/js/event-config.js`.
 
-- Pix: `https://nubank.com.br/cobranca/m4KENiTEVEbrh9fs`
-- Cartão de crédito: `https://www.asaas.com/c/5qlm9j5zefdvrd78`
+Para ativar o checkout, substitua:
 
-Datas e local da próxima turma:
+```js
+const CHECKOUT_URL = "#";
+```
 
-> 26 a 28 de junho de 2026 · Refúgio Inema · Canela - RS.
+pelo link final gerado no Asaas.
 
-## Arquivos de referência
+## Pendências intencionais
 
-As versões antigas continuam no repositório para consulta:
+- TODO: adicionar checkout do Asaas.
+- TODO: adicionar imagens reais.
+- TODO: adicionar projetos reais.
+- TODO: adicionar depoimentos reais.
+- TODO: confirmar URL canônica.
+- TODO: adicionar imagem de compartilhamento final, caso a atual seja substituída.
 
-- `versao-1.html`: conversão direta
-- `versao-2.html`: storytelling
-- `versao-3.html`: visual ousado
-- `versao-4.html`: formato completo presencial
-
----
-
-INEMA.CLUB · 2026
+Os arquivos `versao-1.html` a `versao-4.html` permanecem apenas como referência histórica da landing anterior e não são usados pela página principal. No Vercel, essas rotas são redirecionadas para `/` em `vercel.json`.

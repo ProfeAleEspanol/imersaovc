@@ -1,6 +1,16 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/versao-1", "destination": "/", "permanent": false },
+    { "source": "/versao-1.html", "destination": "/", "permanent": false },
+    { "source": "/versao-2", "destination": "/", "permanent": false },
+    { "source": "/versao-2.html", "destination": "/", "permanent": false },
+    { "source": "/versao-3", "destination": "/", "permanent": false },
+    { "source": "/versao-3.html", "destination": "/", "permanent": false },
+    { "source": "/versao-4", "destination": "/", "permanent": false },
+    { "source": "/versao-4.html", "destination": "/", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
