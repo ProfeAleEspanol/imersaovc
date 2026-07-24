@@ -19,6 +19,7 @@ window.IVC_CONFIG = {
   price: "R$ 2.497",
   installmentCondition: "",
   checkoutUrl: CHECKOUT_URL,
+  portalUrl: "https://www.inema.club/",
   // TODO: adicionar URL do WhatsApp, se for utilizada futuramente.
   whatsappUrl: "",
   seo: {

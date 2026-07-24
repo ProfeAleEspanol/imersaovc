@@ -70,6 +70,20 @@
     });
   }
 
+  function setupPortalLinks() {
+    const portalUrl = config.portalUrl || "https://www.inema.club/";
+    const links = document.querySelectorAll(".js-portal-cta");
+
+    links.forEach(function (link) {
+      link.setAttribute("href", portalUrl);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+      link.addEventListener("click", function () {
+        trackEvent("inema_club_click", { cta_location: link.dataset.ctaLocation || "ecosystem" });
+      });
+    });
+  }
+
   function setupReveal() {
     const elements = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -243,6 +257,7 @@
   }
 
   setupCheckoutButtons();
+  setupPortalLinks();
   setupReveal();
   renderFaqs();
   renderProofs();

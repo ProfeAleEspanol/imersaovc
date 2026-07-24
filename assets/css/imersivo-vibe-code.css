@@ -213,6 +213,17 @@ li {
   width: 100%;
 }
 
+.button-quiet {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .2);
+  color: #f7f3e8;
+  box-shadow: none;
+}
+
+.button-quiet:hover {
+  background: rgba(255, 255, 255, .14);
+}
+
 .section {
   padding: 92px 0;
   border-bottom: 1px solid rgba(16, 23, 21, .08);
@@ -745,6 +756,82 @@ li {
   padding: 4px 2px 0;
 }
 
+.section-ecosystem {
+  background: linear-gradient(180deg, #f3f4ef 0%, #e8eee8 100%);
+}
+
+.ecosystem-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: 34px;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .62)),
+    var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.ecosystem-copy {
+  padding: 36px;
+}
+
+.ecosystem-copy h2 {
+  font-size: 36px;
+  max-width: 720px;
+}
+
+.ecosystem-copy p:not(.section-label) {
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin-top: 16px;
+  max-width: 720px;
+}
+
+.ecosystem-panel {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  background:
+    linear-gradient(160deg, rgba(245, 197, 66, .12), rgba(42, 157, 143, .08)),
+    var(--dark);
+  color: #f7f3e8;
+  padding: 32px;
+}
+
+.ecosystem-panel span {
+  color: var(--primary);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ecosystem-panel strong {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: 28px;
+  line-height: 1.05;
+}
+
+.ecosystem-panel ul {
+  display: grid;
+  gap: 10px;
+}
+
+.ecosystem-panel li {
+  border-top: 1px solid var(--dark-line);
+  color: #dfe5df;
+  font-weight: 800;
+  padding-top: 10px;
+}
+
+.ecosystem-panel small {
+  color: #aeb9b3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .section-offer {
   background: var(--dark);
   color: #f7f3e8;
@@ -977,7 +1064,8 @@ li {
   .hero-grid,
   .tools-layout,
   .offer-layout,
-  .venue-band {
+  .venue-band,
+  .ecosystem-card {
     grid-template-columns: 1fr;
   }
 
@@ -1103,7 +1191,9 @@ li {
   .comparison-card,
   .day-card,
   .offer-card,
-  .venue-band {
+  .venue-band,
+  .ecosystem-copy,
+  .ecosystem-panel {
     padding: 22px;
   }
 
