@@ -25,9 +25,9 @@ window.IVC_CONFIG = {
     title: "Imersivo Vibe Code em Canela | INEMA",
     description: "Transforme sua ideia em uma primeira versão funcional e publicada em três dias de construção presencial com inteligência artificial. 28 a 30 de agosto de 2026, em Canela/RS.",
     // TODO: confirmar URL canônica
-    canonicalUrl: "https://profealeespanol.github.io/imersaovc/",
+    canonicalUrl: "https://imersaovc.vercel.app/",
     // TODO: adicionar imagem de compartilhamento
-    socialImage: "https://profealeespanol.github.io/imersaovc/assets/social/linkedin-feed-1200x627.png"
+    socialImage: "https://imersaovc.vercel.app/assets/social/linkedin-feed-1200x627.png"
   },
   images: {
     hero: "assets/hero-vibe-coding.png"

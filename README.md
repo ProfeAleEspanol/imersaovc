@@ -2,6 +2,8 @@
 
 Landing page estática para venda do **Imersivo Vibe Code**, evento presencial da **INEMA** em Canela/RS.
 
+URL de produção na Vercel: https://imersaovc.vercel.app/
+
 ## Estrutura
 
 - `index.html`: página principal publicada.
