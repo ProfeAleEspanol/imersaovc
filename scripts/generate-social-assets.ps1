@@ -2,6 +2,15 @@ Add-Type -AssemblyName System.Drawing
 
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $heroPath = Join-Path $root "assets\hero-vibe-coding.png"
+$usingIdentityImage = $false
+$identityDir = Join-Path $root "assets\novaidentidade"
+if (Test-Path $identityDir) {
+  $identityImage = Get-ChildItem -LiteralPath $identityDir -Filter *.png | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+  if ($identityImage) {
+    $heroPath = $identityImage.FullName
+    $usingIdentityImage = $true
+  }
+}
 $outDir = Join-Path $root "assets\social"
 New-Item -ItemType Directory -Path $outDir -Force | Out-Null
 
@@ -46,7 +55,16 @@ function Fill-Rounded($g, [float]$x, [float]$y, [float]$w, [float]$h, [float]$r,
 function Draw-CoverImage($g, $img, [int]$w, [int]$h) {
   $srcRatio = $img.Width / $img.Height
   $dstRatio = $w / $h
-  if ($srcRatio -gt $dstRatio) {
+  if ($script:usingIdentityImage) {
+    $srcH = [int]($img.Height * .52)
+    $srcW = [int]($srcH * $dstRatio)
+    if ($srcW -gt $img.Width) {
+      $srcW = $img.Width
+      $srcH = [int]($srcW / $dstRatio)
+    }
+    $srcX = [int](($img.Width - $srcW) * .62)
+    $srcY = [int]($img.Height - $srcH)
+  } elseif ($srcRatio -gt $dstRatio) {
     $srcH = $img.Height
     $srcW = [int]($srcH * $dstRatio)
     $srcX = [int](($img.Width - $srcW) * .54)
@@ -89,16 +107,16 @@ function New-Graphic([int]$w, [int]$h) {
 
 function Draw-Base($g, $hero, [int]$w, [int]$h) {
   Draw-CoverImage $g $hero $w $h
-  $overlay = New-Object System.Drawing.SolidBrush((ColorFromHex "#0f1715" 202))
+  $overlay = New-Object System.Drawing.SolidBrush((ColorFromHex "#071a33" 238))
   $g.FillRectangle($overlay, 0, 0, $w, $h)
   $overlay.Dispose()
 
-  $linePen = New-Object System.Drawing.Pen((ColorFromHex "#f5c542" 82), 3)
+  $linePen = New-Object System.Drawing.Pen((ColorFromHex "#c9751a" 120), 3)
   $g.DrawLine($linePen, $w * .08, $h * .78, $w * .92, $h * .78)
   $linePen.Dispose()
 
-  Fill-Rounded $g ($w * .08) ($h * .08) ($w * .24) 52 8 (ColorFromHex "#ffffff" 22) (ColorFromHex "#ffffff" 44)
-  [void](Draw-Text $g $organization ($w * .10) (($h * .08) + 13) ($w * .20) 22 "#f7f3e8" ([System.Drawing.FontStyle]::Bold))
+  Fill-Rounded $g ($w * .08) ($h * .08) ($w * .24) 52 6 (ColorFromHex "#fffaf0" 26) (ColorFromHex "#fffaf0" 54)
+  [void](Draw-Text $g $organization ($w * .10) (($h * .08) + 13) ($w * .20) 22 "#fffaf0" ([System.Drawing.FontStyle]::Bold))
 }
 
 function Draw-Social([int]$w, [int]$h, [string]$fileName, [float]$titleSize, [float]$left, [float]$top, [float]$textWidth) {
@@ -106,12 +124,12 @@ function Draw-Social([int]$w, [int]$h, [string]$fileName, [float]$titleSize, [fl
   $bmp = $pair[0]
   $g = $pair[1]
   Draw-Base $g $hero $w $h
-  [void](Draw-Text $g $eventName $left $top $textWidth 28 "#f5c542" ([System.Drawing.FontStyle]::Bold))
-  $next = Draw-Text $g $title $left ($top + 58) $textWidth $titleSize "#ffffff" ([System.Drawing.FontStyle]::Bold)
-  $next = Draw-Text $g $subtitle $left ($next + 22) $textWidth 30 "#dfe5df" ([System.Drawing.FontStyle]::Bold)
+  [void](Draw-Text $g $eventName $left $top $textWidth 28 "#c9751a" ([System.Drawing.FontStyle]::Bold))
+  $next = Draw-Text $g $title $left ($top + 58) $textWidth $titleSize "#fffaf0" ([System.Drawing.FontStyle]::Bold)
+  $next = Draw-Text $g $subtitle $left ($next + 22) $textWidth 30 "#fff1d9" ([System.Drawing.FontStyle]::Bold)
   $priceY = [Math]::Min(($next + 28), ($h - 106))
-  Fill-Rounded $g $left $priceY ($textWidth * .70) 70 8 (ColorFromHex "#f5c542") $null
-  [void](Draw-Text $g $price ($left + 24) ($priceY + 20) ($textWidth * .64) 26 "#101715" ([System.Drawing.FontStyle]::Bold))
+  Fill-Rounded $g $left $priceY ($textWidth * .70) 70 6 (ColorFromHex "#c9751a") $null
+  [void](Draw-Text $g $price ($left + 24) ($priceY + 20) ($textWidth * .64) 26 "#0b1d3a" ([System.Drawing.FontStyle]::Bold))
   $bmp.Save((Join-Path $outDir $fileName), [System.Drawing.Imaging.ImageFormat]::Png)
   $g.Dispose()
   $bmp.Dispose()
