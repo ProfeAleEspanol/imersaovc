@@ -4,7 +4,7 @@
 
 Sua ideia não precisa de mais conteúdo. Precisa de execução.
 
-Você já estudou, testou ferramentas e talvez até tenha começado alguma coisa. Mas se ainda não existe um link publicado, o problema provavelmente não é ferramenta.
+Você já estudou, testou ferramentas e talvez até tenha começado alguma coisa. Mas se ainda não existe um projeto construído, o problema provavelmente não é ferramenta.
 
 É direção. Escopo. Tempo protegido. Acompanhamento.
 
@@ -31,7 +31,7 @@ São somente 10 participantes porque cada projeto precisa de direção, acompanh
 28, 29 e 30 de agosto de 2026
 Refúgio INEMA - Canela/RS
 
-Traga uma ideia. Saia com um produto publicado.
+Traga uma ideia. Saia com um produto construído.
 
 Comente IMERSIVO para receber as informações.
 

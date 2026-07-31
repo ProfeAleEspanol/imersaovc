@@ -1,6 +1,5 @@
 // Configuração central da página Imersivo Vibe Code.
-// TODO: adicionar checkout do Asaas
-const CHECKOUT_URL = "#";
+const CHECKOUT_URL = "https://www.asaas.com/c/hzz4io2te275dqtk";
 
 window.IVC_CONFIG = {
   eventName: "Imersivo Vibe Code",
@@ -24,7 +23,7 @@ window.IVC_CONFIG = {
   whatsappUrl: "",
   seo: {
     title: "Imersivo Vibe Code em Canela | INEMA",
-    description: "Transforme sua ideia em uma primeira versão funcional e publicada em três dias de construção presencial com inteligência artificial. 28 a 30 de agosto de 2026, em Canela/RS.",
+    description: "Transforme sua ideia em uma primeira versão funcional e construída em três dias de construção presencial com inteligência artificial. 28 a 30 de agosto de 2026, em Canela/RS.",
     // TODO: confirmar URL canônica
     canonicalUrl: "https://imersaovc.vercel.app/",
     // TODO: adicionar imagem de compartilhamento

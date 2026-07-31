@@ -2,7 +2,7 @@
 
 ## Ideia central
 
-O Imersivo Vibe Code não vende mais conteúdo. Vende o ambiente, o método e o acompanhamento para transformar uma ideia parada em uma primeira versão funcional e publicada.
+O Imersivo Vibe Code não vende mais conteúdo. Vende o ambiente, o método e o acompanhamento para transformar uma ideia parada em uma primeira versão funcional e construída.
 
 ## Linha criativa
 
@@ -10,7 +10,7 @@ Do rascunho ao ar.
 
 ## Promessa
 
-Em três dias presenciais, a pessoa sai do rascunho com clareza, construção acompanhada e uma primeira versão publicada.
+Em três dias presenciais, a pessoa sai do rascunho com clareza, construção acompanhada e uma primeira versão construída.
 
 ## Mecânica de lead
 
@@ -31,4 +31,4 @@ Fluxo sugerido de resposta por DM:
 
 ## Direção visual
 
-Editorial, premium e humana. Fundo creme quente ou azul-marinho profundo, tipografia forte, poucos elementos, detalhes em âmbar, linhas finas e composições que lembram mesa de trabalho, rascunho, produto publicado e ambiente presencial em Canela. Sem imagens futuristas genéricas, sem brilho excessivo e sem textura de IA.
+Editorial, premium e humana. Fundo creme quente ou azul-marinho profundo, tipografia forte, poucos elementos, detalhes em âmbar, linhas finas e composições que lembram mesa de trabalho, rascunho, produto construído e ambiente presencial em Canela. Sem imagens futuristas genéricas, sem brilho excessivo e sem textura de IA.

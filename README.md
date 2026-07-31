@@ -37,14 +37,14 @@ As informações variáveis ficam em `assets/js/event-config.js`.
 Para ativar o checkout, substitua:
 
 ```js
-const CHECKOUT_URL = "#";
+const CHECKOUT_URL = "https://www.asaas.com/c/hzz4io2te275dqtk";
 ```
 
 pelo link final gerado no Asaas.
 
 ## Pendências intencionais
 
-- TODO: adicionar checkout do Asaas.
+- Checkout do Asaas configurado na página principal.
 - TODO: adicionar imagens reais.
 - TODO: adicionar projetos reais.
 - TODO: adicionar depoimentos reais.

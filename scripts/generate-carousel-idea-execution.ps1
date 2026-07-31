@@ -16,9 +16,9 @@ function U([string]$escaped) {
 $caption = @(
   (U "Sua ideia n\u00e3o precisa de mais conte\u00fado. Precisa de execu\u00e7\u00e3o."),
   "",
-  (U "Voc\u00ea j\u00e1 estudou, testou ferramentas, assistiu a aulas e talvez at\u00e9 tenha come\u00e7ado um projeto. Mas se ele ainda n\u00e3o foi publicado, talvez o que esteja faltando seja dire\u00e7\u00e3o, acompanhamento e tempo dedicado para executar."),
+  (U "Voc\u00ea j\u00e1 estudou, testou ferramentas, assistiu a aulas e talvez at\u00e9 tenha come\u00e7ado um projeto. Mas se ele ainda n\u00e3o foi constru\u00eddo, talvez o que esteja faltando seja dire\u00e7\u00e3o, acompanhamento e tempo dedicado para executar."),
   "",
-  (U "No Imersivo Vibe Code, voc\u00ea aprende enquanto constr\u00f3i. Em tr\u00eas dias presenciais, sua pr\u00f3pria ideia se transforma em uma primeira vers\u00e3o funcional e publicada."),
+  (U "No Imersivo Vibe Code, voc\u00ea aprende enquanto constr\u00f3i. Em tr\u00eas dias presenciais, sua pr\u00f3pria ideia se transforma em uma primeira vers\u00e3o funcional e constru\u00edda."),
   "",
   "28, 29 e 30 de agosto de 2026",
   (U "Ref\u00fagio INEMA - Canela/RS"),
@@ -35,7 +35,7 @@ $slides = @(
   @{
     headline = (U "Voc\u00ea estudou.\nTestou ferramentas.\nAssistiu a aulas.")
     sub = (U "Talvez at\u00e9 tenha come\u00e7ado um projeto.")
-    punch = (U "Mas ele ainda n\u00e3o foi publicado.")
+    punch = (U "Mas ele ainda n\u00e3o foi constru\u00eddo.")
   },
   @{
     headline = (U "Talvez o problema n\u00e3o seja falta de conhecimento.")
@@ -52,7 +52,7 @@ $slides = @(
   @{
     eyebrow = "IMERSIVO VIBE CODE"
     headline = (U "Voc\u00ea aprende\nenquanto constr\u00f3i.")
-    sub = (U "Durante tr\u00eas dias presenciais, sua pr\u00f3pria ideia se transforma em uma primeira vers\u00e3o funcional e publicada.")
+    sub = (U "Durante tr\u00eas dias presenciais, sua pr\u00f3pria ideia se transforma em uma primeira vers\u00e3o funcional e constru\u00edda.")
   },
   @{
     headline = (U "Voc\u00ea n\u00e3o precisa ter experi\u00eancia em programa\u00e7\u00e3o.")
@@ -65,7 +65,7 @@ $slides = @(
     )
   },
   @{
-    headline = (U "Traga uma ideia.\nSaia com um produto publicado.")
+    headline = (U "Traga uma ideia.\nSaia com um produto constru\u00eddo.")
     date = "28, 29 e 30 de agosto de 2026"
     venue = (U "Ref\u00fagio INEMA - Canela/RS")
     seats = "Somente 10 participantes"
