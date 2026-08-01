@@ -6,7 +6,7 @@ A nova imagem aponta para uma identidade editorial, premium e presencial. O foco
 
 ## Direção
 
-- Promessa visual: do rascunho ao produto publicado.
+- Promessa visual: do rascunho ao produto construído.
 - Sensação: método, foco, acompanhamento e execução real.
 - Território: Refúgio INEMA, Canela/RS, turma pequena e ambiente protegido de trabalho.
 - Evitar: brilho futurista, textura genérica de IA, neon, excesso de roxo/azul elétrico, mockups soltos sem contexto.

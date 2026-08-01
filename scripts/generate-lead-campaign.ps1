@@ -182,7 +182,7 @@ function Draw-ProductWindow($g, [float]$x, [float]$y, [float]$w, [float]$h, [boo
   Fill-Rounded $g ($x + 44) ($y + 22) 12 12 6 (ColorFromHex $teal)
   Fill-Rounded $g ($x + 66) ($y + 22) 12 12 6 (ColorFromHex $blue)
   Stroke-Line $g ($x + 24) ($y + 72) ($x + $w - 34) ($y + 72) $border 2 160
-  Draw-TextInRect $g "produto publicado" ($x + 28) ($y + 94) ($w - 56) 42 24 $text $true
+  Draw-TextInRect $g "produto construído" ($x + 28) ($y + 94) ($w - 56) 42 24 $text $true
   Fill-Rounded $g ($x + 28) ($y + 154) ($w - 56) 58 8 (ColorFromHex $yellow)
   Draw-TextInRect $g "link no ar" ($x + 54) ($y + 154) ($w - 108) 58 24 $ink $true "Center"
 }
@@ -264,7 +264,7 @@ $campaignDoc = @(
   "",
   "## Ideia central",
   "",
-  (T "O Imersivo Vibe Code n\u00e3o vende mais conte\u00fado. Vende o ambiente, o m\u00e9todo e o acompanhamento para transformar uma ideia parada em uma primeira vers\u00e3o funcional e publicada."),
+  (T "O Imersivo Vibe Code n\u00e3o vende mais conte\u00fado. Vende o ambiente, o m\u00e9todo e o acompanhamento para transformar uma ideia parada em uma primeira vers\u00e3o funcional e constru\u00edda."),
   "",
   "## Linha criativa",
   "",
@@ -272,7 +272,7 @@ $campaignDoc = @(
   "",
   "## Promessa",
   "",
-  (T "Em tr\u00eas dias presenciais, a pessoa sai do rascunho com clareza, constru\u00e7\u00e3o acompanhada e uma primeira vers\u00e3o publicada."),
+  (T "Em tr\u00eas dias presenciais, a pessoa sai do rascunho com clareza, constru\u00e7\u00e3o acompanhada e uma primeira vers\u00e3o constru\u00edda."),
   "",
   (T "## Mec\u00e2nica de lead"),
   "",
@@ -293,7 +293,7 @@ $campaignDoc = @(
   "",
   (T "## Dire\u00e7\u00e3o visual"),
   "",
-  (T "Editorial, premium e humana. Fundo creme quente ou azul-marinho profundo, tipografia forte, poucos elementos, detalhes em \u00e2mbar, linhas finas e composi\u00e7\u00f5es que lembram mesa de trabalho, rascunho, produto publicado e ambiente presencial em Canela. Sem imagens futuristas gen\u00e9ricas, sem brilho excessivo e sem textura de IA.")
+  (T "Editorial, premium e humana. Fundo creme quente ou azul-marinho profundo, tipografia forte, poucos elementos, detalhes em \u00e2mbar, linhas finas e composi\u00e7\u00f5es que lembram mesa de trabalho, rascunho, produto constru\u00eddo e ambiente presencial em Canela. Sem imagens futuristas gen\u00e9ricas, sem brilho excessivo e sem textura de IA.")
 ) -join [Environment]::NewLine
 
 $legendas = @(
@@ -303,7 +303,7 @@ $legendas = @(
   "",
   (T "Sua ideia n\u00e3o precisa de mais conte\u00fado. Precisa de execu\u00e7\u00e3o."),
   "",
-  (T "Voc\u00ea j\u00e1 estudou, testou ferramentas e talvez at\u00e9 tenha come\u00e7ado alguma coisa. Mas se ainda n\u00e3o existe um link publicado, o problema provavelmente n\u00e3o \u00e9 ferramenta."),
+  (T "Voc\u00ea j\u00e1 estudou, testou ferramentas e talvez at\u00e9 tenha come\u00e7ado alguma coisa. Mas se ainda n\u00e3o existe um projeto constru\u00eddo, o problema provavelmente n\u00e3o \u00e9 ferramenta."),
   "",
   (T "\u00c9 dire\u00e7\u00e3o. Escopo. Tempo protegido. Acompanhamento."),
   "",
@@ -330,7 +330,7 @@ $legendas = @(
   "28, 29 e 30 de agosto de 2026",
   (T "Ref\u00fagio INEMA - Canela/RS"),
   "",
-  "Traga uma ideia. Saia com um produto publicado.",
+  "Traga uma ideia. Saia com um produto construído.",
   "",
   (T "Comente IMERSIVO para receber as informa\u00e7\u00f5es."),
   "",
@@ -362,7 +362,7 @@ for ($i = 1; $i -le 7; $i++) {
       Fill-Rounded $g 82 430 608 82 8 (ColorFromHex $yellow)
       Draw-TextInRect $g (U "Precisa de execu\u00e7\u00e3o.") 122 430 528 82 42 $ink $true
       Draw-Stack $g 650 618 .9
-      [void](Draw-Text $g (U "O primeiro passo n\u00e3o \u00e9 consumir mais uma aula. \u00c9 transformar o que voc\u00ea j\u00e1 sabe em algo publicado.") 86 650 486 29 $muted)
+      [void](Draw-Text $g (U "O primeiro passo n\u00e3o \u00e9 consumir mais uma aula. \u00c9 transformar o que voc\u00ea j\u00e1 sabe em algo constru\u00eddo.") 86 650 486 29 $muted)
     }
     2 {
       [void](Draw-Text $g (U "A ideia parada parece produtiva.") 82 174 790 56 $ink $true)
@@ -441,7 +441,7 @@ for ($i = 1; $i -le 6; $i++) {
   switch ($i) {
     1 {
       [void](Draw-Text $g (U "Do rascunho\nao ar.") 82 176 700 76 "#fffaf0" $true)
-      [void](Draw-Text $g (U "Tr\u00eas dias presenciais para transformar uma ideia em uma primeira vers\u00e3o funcional e publicada.") 86 470 760 32 "#fff1d9")
+      [void](Draw-Text $g (U "Tr\u00eas dias presenciais para transformar uma ideia em uma primeira vers\u00e3o funcional e constru\u00edda.") 86 470 760 32 "#fff1d9")
       Draw-ThreeStep $g 86 738 $true
     }
     2 {
@@ -465,7 +465,7 @@ for ($i = 1; $i -le 6; $i++) {
     }
     5 {
       [void](Draw-Text $g (U "Voc\u00ea n\u00e3o sai com uma pasta de anota\u00e7\u00f5es.") 82 174 850 54 $ink $true)
-      [void](Draw-Text $g (U "Sai com uma primeira vers\u00e3o publicada e uma base para continuar construindo.") 86 420 780 34 $muted)
+      [void](Draw-Text $g (U "Sai com uma primeira vers\u00e3o constru\u00edda e uma base para continuar construindo.") 86 420 780 34 $muted)
       Fill-Rounded $g 86 666 400 118 8 (ColorFromHex "#fffaf0") (ColorFromHex $line) 2
       Draw-TextInRect $g (U "menos teoria solta") 126 666 320 118 31 $muted $true "Center"
       Fill-Rounded $g 596 666 400 118 8 (ColorFromHex $yellow)
@@ -498,7 +498,7 @@ for ($i = 1; $i -le 5; $i++) {
   switch ($i) {
     1 {
       [void](Draw-Text $g (U "N\u00e3o abriremos uma turma grande.") 82 174 820 60 "#fffaf0" $true)
-      [void](Draw-Text $g (U "Porque o objetivo n\u00e3o \u00e9 lotar uma sala. \u00c9 acompanhar projetos reais at\u00e9 uma primeira vers\u00e3o publicada.") 86 412 780 31 "#e2d7c8")
+      [void](Draw-Text $g (U "Porque o objetivo n\u00e3o \u00e9 lotar uma sala. \u00c9 acompanhar projetos reais at\u00e9 uma primeira vers\u00e3o constru\u00edda.") 86 412 780 31 "#e2d7c8")
       Draw-SeatGrid $g 190 660 $true
     }
     2 {
@@ -529,7 +529,7 @@ for ($i = 1; $i -le 5; $i++) {
       Draw-TextInRect $g (U "Ref\u00fagio INEMA - Canela/RS") 126 710 740 58 28 $muted $true "Center"
     }
     5 {
-      [void](Draw-Text $g (U "Traga uma ideia.\nSaia com um produto publicado.") 82 174 860 60 "#fffaf0" $true)
+      [void](Draw-Text $g (U "Traga uma ideia.\nSaia com um produto constru\u00eddo.") 82 174 860 60 "#fffaf0" $true)
       [void](Draw-Text $g (U "Imersivo Vibe Code\n28, 29 e 30 de agosto de 2026\nRef\u00fagio INEMA - Canela/RS\nSomente 10 participantes") 86 500 780 31 "#fff1d9" $true)
       Draw-LeadBadge $g 86 792 720
     }

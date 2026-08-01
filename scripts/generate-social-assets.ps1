@@ -15,7 +15,7 @@ $outDir = Join-Path $root "assets\social"
 New-Item -ItemType Directory -Path $outDir -Force | Out-Null
 
 $eventName = "IMERSIVO VIBE CODE"
-$title = "Sua ideia pode estar publicada em tr$([char]0x00EA)s dias."
+$title = "Sua ideia pode estar constru\u00EDda em tr$([char]0x00EA)s dias."
 $subtitle = "28 a 30 de agosto de 2026 - Ref$([char]0x00FA)gio INEMA - Canela/RS"
 $price = "Investimento: R$ 2.497"
 $organization = "INEMA"
